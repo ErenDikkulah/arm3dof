@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>arm3dof</name>
+  <version>0.0.1</version>
+  <description>3-DOF arm with joint position control in Gazebo.</description>
+  <maintainer email="dikkulah@null.net">erendikkulah</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>rclpy</depend>
+  <depend>std_msgs</depend>
+  <!-- Needed at runtime to bridge ROS <-> Gazebo topics -->
+  <exec_depend>ros_gz_bridge</exec_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
