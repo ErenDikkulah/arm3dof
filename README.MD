@@ -34,3 +34,52 @@ a screenshot from rqt_graph command
 [![movement video](assets/movement%20video%20thumb.png)](assets/movement%20video.mp4)
 
 a video related to movement scenario of the robot
+
+## Data
+
+### Listed ros2 nodes:
+
+```bash
+/robot_state_publisher
+/ros_gz_bridge
+```
+
+### Listed ros2 topics:
+
+```bash
+/j1_position_cmd
+/j2_position_cmd
+/j3_position_cmd
+/joint_states
+/parameter_events
+/robot_description
+/rosout
+/tf
+/tf_static
+```
+
+### Listed gazebo topics:
+
+```bash
+/robot_state_publisher
+/clock
+/gazebo/resource_paths
+/gui/camera/pose
+/gui/currently_tracked
+/gui/track
+/j1_position_cmd
+/j2_position_cmd
+/j3_position_cmd
+/joint_states
+/stats
+/world/empty/clock
+/world/empty/dynamic_pose/info
+/world/empty/pose/info
+/world/empty/scene/deletion
+/world/empty/scene/info
+/world/empty/state
+/world/empty/stats
+/world/empty/light_config
+/world/empty/material_color
+/ros_gz_bridge
+```
