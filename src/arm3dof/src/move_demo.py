@@ -8,9 +8,9 @@ class ArmMover(Node):
     def __init__(self):
         super().__init__('arm_mover_node')
 
-        self.pub_j1 = self.create_publisher(Float64, '/arm/j1/cmd_pos', 10)
-        self.pub_j2 = self.create_publisher(Float64, '/arm/j2/cmd_pos', 10)
-        self.pub_j3 = self.create_publisher(Float64, '/arm/j3/cmd_pos', 10)
+        self.pub_j1 = self.create_publisher(Float64, 'j1_position_cmd', 10)
+        self.pub_j2 = self.create_publisher(Float64, 'j2_position_cmd', 10)
+        self.pub_j3 = self.create_publisher(Float64, 'j3_position_cmd', 10)
 
         self.get_logger().info("Waiting for 2 seconds...")
 

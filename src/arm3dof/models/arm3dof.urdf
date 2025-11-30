@@ -138,6 +138,5 @@
                 name="gz::sim::systems::JointStatePublisher">
             <topic>joint_states</topic>
         </plugin>
-        <!--<parameters>$(find arm3dof)/config/controllers.yaml</parameters>-->
     </gazebo>
 </robot>
