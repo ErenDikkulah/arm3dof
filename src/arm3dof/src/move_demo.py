@@ -12,7 +12,7 @@ class ArmMover(Node):
         self.pub_j2 = self.create_publisher(Float64, 'j2_position_cmd', 10)
         self.pub_j3 = self.create_publisher(Float64, 'j3_position_cmd', 10)
 
-        self.get_logger().info("Waiting for 2 seconds...")
+        self.get_logger().info("Waiting for 5 seconds...")
 
     def send_pose(self, j1_val, j2_val, j3_val):
         msg = Float64()
@@ -34,10 +34,8 @@ def main(args=None):
     node = ArmMover()
 
     try:
-        time.sleep(2.0)
-
-        node.send_pose(0.0, 0.0, 0.0)
-        time.sleep(3.0)
+        time.sleep(5.0)
+        node.get_logger().info("Starting movement scenario...")
 
         node.send_pose(1.0, -0.5, -0.5)
         time.sleep(3.0)

@@ -88,6 +88,8 @@
         <origin xyz="0 0 0.05" rpy="0 0 0"/>
         <axis xyz="0 0 1"/>
         <limit lower="-3.14" upper="3.14" effort="10" velocity="1.0"/>
+        <damping value="0.5"/>
+        <dynamics friction="0.5"/>
     </joint>
     <joint name="j2_shoulder" type="revolute">
         <parent link="link_1"/>
@@ -95,6 +97,8 @@
         <origin xyz="0 0 0.5" rpy="0 0 0"/>
         <axis xyz="0 1 0"/>
         <limit lower="-1.57" upper="1.57" effort="10" velocity="1.0"/>
+        <damping value="0.5"/>
+        <dynamics friction="0.5"/>
     </joint>
     <joint name="j3_elbow" type="revolute">
         <parent link="link_2"/>
@@ -102,15 +106,17 @@
         <origin xyz="0 0 0.5" rpy="0 0 0"/>
         <axis xyz="0 1 0"/>
         <limit lower="-1.57" upper="1.57" effort="10" velocity="1.0"/>
+        <damping value="0.5"/>
+        <dynamics friction="0.5"/>
     </joint>
     <gazebo>
         <plugin name="gz::sim::systems::JointPositionController"
                 filename="libgz-sim-joint-position-controller-system.so">
             <joint_name>j1_base_jaw</joint_name>
             <topic>j1_position_cmd</topic>
-            <p_gain>10.0</p_gain>
-            <i_gain>0.0</i_gain>
-            <d_gain>0.1</d_gain>
+            <p_gain>500.0</p_gain>
+            <i_gain>2.0</i_gain>
+            <d_gain>20.0</d_gain>
         </plugin>
     </gazebo>
     <gazebo>
@@ -118,9 +124,9 @@
                 filename="libgz-sim-joint-position-controller-system.so">
             <joint_name>j2_shoulder</joint_name>
             <topic>j2_position_cmd</topic>
-            <p_gain>10.0</p_gain>
-            <i_gain>0.0</i_gain>
-            <d_gain>0.1</d_gain>
+            <p_gain>500.0</p_gain>
+            <i_gain>2.0</i_gain>
+            <d_gain>20.0</d_gain>
         </plugin>
     </gazebo>
     <gazebo>
@@ -128,9 +134,9 @@
                 filename="libgz-sim-joint-position-controller-system.so">
             <joint_name>j3_elbow</joint_name>
             <topic>j3_position_cmd</topic>
-            <p_gain>10.0</p_gain>
-            <i_gain>0.0</i_gain>
-            <d_gain>0.1</d_gain>
+            <p_gain>500.0</p_gain>
+            <i_gain>2.0</i_gain>
+            <d_gain>20.0</d_gain>
         </plugin>
     </gazebo>
     <gazebo>
